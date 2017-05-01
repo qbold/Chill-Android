@@ -1,0 +1,73 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url "https://oss.sonatype.org/content/groups/public/" }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.20.1'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+apply plugin: 'io.fabric'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'ChillKey'
+            keyPassword '5353zv'
+            storeFile file('C:/Users/Qbold/keystore.jks')
+            storePassword '5353zv'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "com.iamchill.chill"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 22
+        versionName '2.8'
+        multiDexEnabled = true
+        signingConfig signingConfigs.config
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+    productFlavors {
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    wearApp project(':wear')
+    compile('com.twitter.sdk.android:twitter:1.11.0@aar') {
+        transitive = true;
+    }
+    compile 'com.facebook.android:facebook-android-sdk:4.7.0'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:multidex:1.0.0'
+    //    compile 'com.getpebble:pebblekit:3.0.0'
+    compile 'com.google.android.gms:play-services-ads:8.4.0'
+    compile 'com.google.android.gms:play-services-auth:8.4.0'
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile 'com.google.android.gms:play-services-identity:8.4.0'
+    compile files('libs/pngj-2.1.1.jar')
+}

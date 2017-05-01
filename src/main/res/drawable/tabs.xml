@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_selected="true">
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:top="48dp">
+                <shape android:shape="rectangle">
+                    <size android:height="4dp"></size>
+                    <solid android:color="#00cea0"></solid>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <!--<item android:drawable="@android:drawable/title_bar" android:state_selected="false" />-->
+
+</selector>

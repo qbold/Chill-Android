@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.iamchill.chill.MoreActivity">
+
+    <GridView
+        android:id="@+id/gridView2"
+        android:layout_width="228dp"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/hashT"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:background="@null"
+        android:choiceMode="singleChoice"
+        android:drawSelectorOnTop="false"
+        android:fastScrollAlwaysVisible="false"
+        android:fastScrollEnabled="false"
+        android:foregroundGravity="center_vertical|center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:layoutMode="opticalBounds"
+        android:numColumns="3"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/stuffcoming"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#00cea0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView9"
+        android:layout_centerHorizontal="true"
+        android:text="@string/choosechill"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#00cea0" />
+
+    <EditText
+        android:id="@+id/hashTag"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:layout_weight="0.75"
+        android:background="@null"
+        android:hint="taptotype"
+        android:maxLength="10"
+        android:outlineProvider="none"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/hashTagCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="32dp"
+        android:text="10"
+        android:textColor="#00cea0"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/hashT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:text="#"
+        android:textColor="#00cea0"
+        android:textSize="25dp" />
+
+</RelativeLayout>

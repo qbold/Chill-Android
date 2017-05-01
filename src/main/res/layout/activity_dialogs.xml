@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".MainActivity"
+    android:background="#ffffffff">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#acacac"
+            android:visibility="gone"
+            android:id="@+id/internet_l">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/no_internet"
+                android:id="@+id/textView19"
+                android:textColor="#ffffff"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/relativeLayout"
+            android:background="@drawable/rect">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/hs_dialogs"
+                android:id="@+id/adr"
+                android:textColor="#6a6a6a"
+                android:layout_row="4"
+                android:layout_column="17"
+                android:textSize="20sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:background="@drawable/add_people"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imageView2"
+                android:onClick="openSearchActivity"
+                android:clickable="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15dp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/textView2"
+                android:onClick="openSettings"
+                android:clickable="true"
+                android:background="@drawable/dots"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="15dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/dialogs_list"
+        android:textAlignment="center"
+        android:stackFromBottom="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:dividerHeight="0dp"
+        android:longClickable="false"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:clickable="false"
+        android:choiceMode="singleChoice" />
+
+</RelativeLayout>

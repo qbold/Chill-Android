@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/search_users"
+        android:layout_width="191dp"
+        android:layout_height="74dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/logo_chill" />
+
+    <TextView
+        android:id="@+id/twitter_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_users"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="@string/auth_1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffa7a8aa" />
+
+    <TextView
+        android:id="@+id/done_button_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/twitter_text"
+        android:layout_centerHorizontal="true"
+        android:text="@string/auth_2"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffa7a8aa" />
+
+    <EditText
+        android:id="@+id/promocode_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/done_button_profile"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:hint="Login"
+        android:inputType="textPersonName"
+        android:minHeight="60dp"
+        android:paddingStart="200dp"
+        android:singleLine="true"
+        android:textColor="#ffa0a0a2" />
+
+    <EditText
+        android:id="@+id/editPassword_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/promocode_id"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:minHeight="60dp"
+        android:paddingStart="200dp"
+        android:singleLine="true"
+        android:textColor="#ffa0a0a2" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:id="@+id/rel_lq"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:background="#ff00cea0"
+            android:clickable="true"
+            android:minHeight="60dp"
+            android:onClick="clickOk"
+            android:text="@string/auth_go"
+            android:textColor="#fff4f2f5" />
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_centerInParent="true"
+            android:translationZ="2dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/nickname_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/promocode_id"
+        android:layout_alignBottom="@+id/promocode_id"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="19dp"
+        android:layout_toStartOf="@+id/twitter_text"
+        android:text="@string/auth_nickname"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editPassword_id"
+        android:layout_alignBottom="@+id/editPassword_id"
+        android:layout_alignLeft="@+id/nickname_id"
+        android:layout_alignStart="@+id/nickname_id"
+        android:text="@string/auth_password"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000" />
+
+</RelativeLayout>

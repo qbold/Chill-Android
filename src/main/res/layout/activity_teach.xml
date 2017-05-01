@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ImageView
+        android:id="@+id/line_new2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:focusableInTouchMode="true"
+        android:src="@drawable/teach1" />
+
+    <Button
+        android:id="@+id/plot1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/circle"
+        android:onClick="goToSecondTeach"
+        android:cropToPadding="false"
+        android:layout_alignParentRight="false"
+        android:layout_toRightOf="@+id/sp_id"
+        android:clickable="true" />
+
+    <Button
+        android:id="@+id/plot0"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/plot1"
+        android:background="@drawable/circlefill"
+        android:onClick="goToFirstTeach"
+        android:layout_alignLeft="@+id/sp_id"
+        android:layout_marginLeft="-20dp"
+        android:clickable="true" />
+
+    <Space
+        android:layout_width="30dp"
+        android:layout_height="20px"
+        android:layout_below="@+id/plot0"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/sp_id" />
+</RelativeLayout>

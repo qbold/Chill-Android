@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context=".MainActivity"
+    android:background="#ffffffff">
+
+    <ImageView
+        android:layout_width="191dp"
+        android:layout_height="74dp"
+        android:id="@+id/search_users"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/logo_chill"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/haveapromocode"
+        android:id="@+id/twitter_text"
+        android:layout_marginTop="50dp"
+        android:textColor="#ffa7a8aa"
+        android:layout_below="@+id/search_users"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/getperks"
+        android:id="@+id/done_button_profile"
+        android:textColor="#ffa7a8aa"
+        android:layout_below="@+id/twitter_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/promocode_id"
+        android:hint="iamchill"
+        android:layout_below="@+id/done_button_profile"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:singleLine="true"
+        android:textColor="#ffa0a0a2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:minHeight="60dp"
+        android:paddingStart="200dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/promocode"
+        android:id="@+id/nickname_id"
+        android:layout_alignBaseline="@+id/promocode_id"
+        android:layout_alignBottom="@+id/promocode_id"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="19dp"
+        android:textColor="#000000" />
+
+    <Button
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#00cea0"
+        android:text="@string/skip"
+        android:onClick="skip"
+        android:id="@+id/skip_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:padding="20dp"
+        android:layout_marginRight="50dp"
+        android:clickable="true" />
+
+    <Button
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#00cea0"
+        android:text="@string/got"
+        android:onClick="got"
+        android:id="@+id/got_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="20dp"
+        android:layout_marginLeft="50dp"
+        android:clickable="true" />
+
+</RelativeLayout>
